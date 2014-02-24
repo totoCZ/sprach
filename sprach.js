@@ -34,7 +34,7 @@ function init() {
 }
 
 function playSound(key, time) {
-	if (key == ' ') key = 'BADBEEF';
+	if (key === ' ') key = 'BADBEEF';
 
 	if (isNaN(key)) {
 		if (key == '*') key = 10;
