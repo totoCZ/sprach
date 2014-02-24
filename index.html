@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <title>Stasi Speech Machine</title>
+    <script src="buffer-loader.js"></script>
+    <script src="sprach.js"></script>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+    <style scoped>
+        .button-xlarge {
+            font-size: 125%;
+        }
+    </style>
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/main-grid-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/main-grid.css">
+    <!--<![endif]-->
+
+
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/blog-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/layouts/blog.css">
+    <!--<![endif]-->
+
+</head>
+
+<body>
+
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-med-1-4">
+            <div class="header">
+                <hgroup>
+                    <h1 class="brand-title">sprach machine</h1>
+                    <h2 class="brand-tagline">25 Feb: Maciej Hunia's birthday</h2>
+                </hgroup>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(7,0)">7</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(8,0)">8</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(9,0)">9</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(4,0)">4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(5,0)">5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(6,0)">6</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(1,0)">1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(2,0)">2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(3,0)">3</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(0,0)">0</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(10,0)">Achtung</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(11,0)">Trennung</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="javascript:playSound(12,0)">Ende</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>keyboard:</p>
+                <input id="keyboard">
+            </div>
+        </div>
+
+        <div class="content pure-u-1 pure-u-med-3-4">
+            <div>
+                <div class="posts">
+                    <h1 class="content-subhead">Program</h1>
+                    <h2><b>BUG:</b> Reload after every use.</h2>
+                    <form class="pure-form pure-form-stacked">
+                        <fieldset>
+
+                            <label for="call">Call</label>
+                            <input id="call" type="text" placeholder="123/00">
+
+                            <label for="body">Message</label>
+                            <textarea rows="6" cols="80" name="body" id="body"></textarea>
+                            <button type="submit" class="button-xlarge pure-button pure-button-primary">Play AW-style message</button>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <ul>
+                            <li>With love, github.com/TomHetmer 2014-02-24</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
