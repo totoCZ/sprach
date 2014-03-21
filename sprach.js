@@ -70,14 +70,14 @@ function sendMessage() {
 
 	var callRepeat = 4;
 	var delay = 4;
-	var speed = 0.8;
+	var speed = 0.6;
 
 	call = document.getElementById("call").value;
 
 	for (var i = 0; i < callRepeat; i++) {
 
 		for (var j = 0; j < call.length; j++) {
-			playSound(call[j], speed * j + i * delay);
+			playSound(call[j], speed * j + (delay * i));
 		}
 
 	}
