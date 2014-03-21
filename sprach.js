@@ -70,7 +70,7 @@ function sendMessage() {
 
 	var callRepeat = 4;
 	var delay = 4;
-	var speed = 0.6;
+	var speed = 0.8;
 
 	call = document.getElementById("call").value;
 
