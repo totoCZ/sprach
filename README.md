@@ -3,8 +3,8 @@ sprach
 
 Experimental javascript simulation of the old Stasi Morse-Speech Generator.
 
-http://sprach.hetmer.net
+http://sprach.hetmer.cz
 ---
 
-http://dotch.hetmer.net
+http://dotch.hetmer.cz
 ---
