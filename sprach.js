@@ -69,8 +69,8 @@ window.onload = function () {
 function sendMessage() {
 
 	var callRepeat = 4;
-	var delay = 4;
-	var speed = 0.8;
+	var delay = 5;
+	var speed = 0.6;
 
 	call = document.getElementById("call").value;
 
