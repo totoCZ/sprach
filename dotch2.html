@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>The Dotch Tree</title>
+  <meta name="author" content="totoCZ, danix111">
+
+  <script src="buffer-loader.js"></script>
+
+  <style>
+   html { 
+     width:100%; 
+     height:100%; 
+     background:url(./neath_the_dotchtree.jpg) center center no-repeat;
+  }
+  </style>
+
+</head>
+<body>
+
+<script>
+// toto 2014
+// ripped off from http://www.html5rocks.com/en/tutorials/webaudio/intro/
+
+var context;
+var bufferLoader;
+
+function init() {
+	try {
+		// Fix up for prefixing
+		window.AudioContext = window.AudioContext || window.webkitAudioContext;
+		context = new AudioContext();
+	} catch (e) {
+		alert('Web Audio API is not supported in this browser');
+	}
+	bufferLoader = new BufferLoader(
+		context, [
+			'./sounds/6.wav',
+		],
+		finishedLoading
+	);
+	bufferLoader.load();
+}
+
+function dotch() {
+		var source = context.createBufferSource();
+		source.buffer = window.sounds[0];
+		source.connect(context.destination);
+		source.start ? source.start(0) : source.noteOn(0);
+}
+
+function finishedLoading(returnedBuffer) {
+	window.sounds = returnedBuffer;
+}
+
+window.onload = function () {
+	init();
+
+	function loop() {
+	    setTimeout(function() {
+	            dotch();
+	            loop();  
+	    }, 2000);
+	}
+
+	loop();
+}
+</script>
+
+</body>
+</html>
