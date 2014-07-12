@@ -24,9 +24,6 @@ function init() {
 			'./sounds/7.wav',
 			'./sounds/8.wav',
 			'./sounds/9.wav',
-			'./sounds/achtung.wav',
-			'./sounds/trennung.wav',
-			'./sounds/ende.wav',
 		],
 		finishedLoading
 	);
@@ -35,12 +32,6 @@ function init() {
 
 function playSound(key, time) {
 	if (key === ' ') key = 'BADBEEF';
-
-	if (isNaN(key)) {
-		if (key == '*') key = 10;
-		if (key == '/') key = 11;
-		if (key == '+') key = 12;
-	}
 
 	if (!isNaN(key)) {
 		var source = context.createBufferSource();
@@ -68,9 +59,9 @@ window.onload = function () {
 
 function sendMessage() {
 
-	var callRepeat = 4;
-	var delay = 4;
-	var speed = 0.8;
+	var callRepeat = 2;
+	var delay = 3.5;
+	var speed = 0.75;
 
 	call = document.getElementById("call").value;
 
@@ -82,13 +73,9 @@ function sendMessage() {
 
 	}
 
-	playSound(10, delay * callRepeat);
-
 	body = document.getElementById("body").value;
 
 	for (var k = 0; k < body.length; k++) {
 		playSound(body[k], speed * k + (delay * callRepeat) + 2);
 	}
-
-	playSound(12, speed * k + (delay * callRepeat) + 3);
 }
