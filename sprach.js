@@ -68,7 +68,7 @@ function sendMessage() {
 	for (var i = 0; i < callRepeat; i++) {
 
 		for (var j = 0; j < call.length; j++) {
-			playSound(call[j], speed * j + i * delay);
+			playSound(call[j], speed * j + (delay * i));
 		}
 
 	}
